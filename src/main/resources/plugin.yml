@@ -1,0 +1,5 @@
+main: me.ledovec.Main
+name: Tournament
+version: '1.0'
+description: Minecraft tournament
+author: Ledovec
