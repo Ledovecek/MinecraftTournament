@@ -1,4 +1,11 @@
 package me.ledovec.events;
 
-public class GamePauseEvent {
+import me.ledovec.game.Game;
+
+public class GamePauseEvent extends GameEvent {
+
+    public GamePauseEvent(Game game) {
+        super(game);
+    }
+
 }

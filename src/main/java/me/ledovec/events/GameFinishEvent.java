@@ -1,9 +1,11 @@
 package me.ledovec.events;
 
-public class GameFinishEvent {
+import me.ledovec.game.Game;
 
-    public GameFinishEvent() {
+public class GameFinishEvent extends GameEvent {
 
+    public GameFinishEvent(Game game) {
+        super(game);
     }
 
 }

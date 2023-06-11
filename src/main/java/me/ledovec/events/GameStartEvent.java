@@ -1,4 +1,11 @@
 package me.ledovec.events;
 
-public class GameStartEvent {
+import me.ledovec.game.Game;
+
+public class GameStartEvent extends GameEvent {
+
+    public GameStartEvent(Game game) {
+        super(game);
+    }
+
 }
