@@ -7,7 +7,7 @@ import me.ledovec.session.GameSession;
 public class ParkourGame implements Game {
 
     public ParkourGame() {
-        System.out.println("Jbee?");
+
     }
 
     @Override

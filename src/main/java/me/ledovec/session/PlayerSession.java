@@ -10,7 +10,9 @@ public class PlayerSession implements Session<Long, Player> {
     private static volatile AtomicLong GLOBAL_ID = new AtomicLong(0);
 
     private final Player player;
+
     private String nickname;
+
     private final long id;
 
     protected PlayerSession(Player player) {

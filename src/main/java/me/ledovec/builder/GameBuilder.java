@@ -8,7 +8,8 @@ import me.ledovec.listener.GameListener;
 public class GameBuilder {
 
     private GameListener gameListener;
-    private GameType gameType;
+
+    private final GameType gameType;
 
     public GameBuilder(GameType gameType) {
         this.gameType = gameType;

@@ -1,4 +1,4 @@
-package me.ledovec;
+package me.ledovec.session.provider;
 
 import me.ledovec.game.Game;
 

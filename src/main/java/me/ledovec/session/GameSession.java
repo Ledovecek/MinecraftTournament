@@ -9,6 +9,7 @@ public class GameSession implements TimedSession<Long, Game>, Pauseable {
     private static volatile AtomicLong GLOBAL_ID = new AtomicLong(0);
 
     private final Game game;
+
     private final long id;
 
     protected GameSession(Game game) {

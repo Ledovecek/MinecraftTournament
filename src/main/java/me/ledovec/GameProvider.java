@@ -10,7 +10,9 @@ import org.bukkit.event.HandlerList;
 public class GameProvider implements Provider {
 
     private Game currentGame;
+
     private GameListener legacyListener;
+
     private GameListener currentListener;
 
     @Override
