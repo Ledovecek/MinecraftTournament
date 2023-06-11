@@ -1,5 +1,7 @@
 package me.ledovec.game;
 
+import me.ledovec.game.types.ParkourGame;
+
 public enum GameType {
     PARKOUR(ParkourGame.class);
 

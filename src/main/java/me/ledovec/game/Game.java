@@ -1,22 +1,24 @@
 package me.ledovec.game;
 
-import me.ledovec.Main;
 import me.ledovec.listener.GameListener;
+import me.ledovec.session.GameSession;
 
-public abstract class Game {
+public interface Game {
 
-    private final GameListener gameListener;
+    void start();
 
-    public Game(GameListener gameListener) {
-        this.gameListener = gameListener;
-    }
+    void stop();
 
-    public void start() {
-        Main.GAME_PROVIDER.updateListener();
-    }
+    void pause();
 
-    public abstract void stop();
+    void unpause();
 
-    public abstract void pause();
+    void setGameListener(GameListener gameListener);
+
+    void setGameSession(GameSession gameSession);
+
+    GameListener getGameListener();
+
+    GameSession getGameSession();
 
 }

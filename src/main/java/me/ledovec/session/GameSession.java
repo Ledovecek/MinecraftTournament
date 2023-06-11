@@ -1,18 +1,18 @@
 package me.ledovec.session;
 
-import org.bukkit.entity.Player;
+import me.ledovec.game.Game;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-public class GameSession implements TimedSession<Long, Player>, Pauseable {
+public class GameSession implements TimedSession<Long, Game>, Pauseable {
 
     private static volatile AtomicLong GLOBAL_ID = new AtomicLong(0);
 
-    private final Player player;
+    private final Game game;
     private final long id;
 
-    protected GameSession(Player player) {
-        this.player = player;
+    protected GameSession(Game game) {
+        this.game = game;
         id = GLOBAL_ID.incrementAndGet();
     }
 
@@ -22,8 +22,8 @@ public class GameSession implements TimedSession<Long, Player>, Pauseable {
     }
 
     @Override
-    public Player getSessionSubject() {
-        return player;
+    public Game getSessionSubject() {
+        return game;
     }
 
     @Override

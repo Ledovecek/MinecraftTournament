@@ -3,6 +3,7 @@ package me.ledovec;
 import lombok.Getter;
 import me.ledovec.game.Game;
 import me.ledovec.listener.GameListener;
+import me.ledovec.session.provider.Provider;
 import org.bukkit.event.HandlerList;
 
 @Getter
