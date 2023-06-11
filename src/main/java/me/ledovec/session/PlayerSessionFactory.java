@@ -25,7 +25,9 @@ public class PlayerSessionFactory
 
     @Override
     public void removeBySubject(Player player) {
-        Optional<PlayerSession> sessionOptional = sessions.stream().filter(s -> s.getSessionSubject().equals(player)).findFirst();
+        Optional<PlayerSession> sessionOptional =
+                sessions.stream().filter(s -> s.getSessionSubject().equals(player))
+                .findFirst();
         sessionOptional.ifPresent(sessions::remove);
     }
 
