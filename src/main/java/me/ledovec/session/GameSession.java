@@ -2,10 +2,7 @@ package me.ledovec.session;
 
 import me.ledovec.game.Game;
 
-import java.sql.Time;
 import java.time.Instant;
-import java.util.Date;
-import java.util.Timer;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class GameSession implements TimedSession<Long, Game>, Pauseable {
