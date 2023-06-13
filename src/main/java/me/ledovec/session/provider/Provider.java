@@ -1,15 +1,15 @@
 package me.ledovec.session.provider;
 
-import me.ledovec.game.Game;
+public interface Provider<T> {
 
-public interface Provider {
+    void beginPrepared();
 
-    void startPrepared();
-
-    void prepareGame(Game game);
+    void prepare(T t);
 
     void pauseCurrent();
 
     void stopCurrent();
+
+    T getPrepared();
 
 }
