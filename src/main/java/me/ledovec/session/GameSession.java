@@ -2,6 +2,10 @@ package me.ledovec.session;
 
 import me.ledovec.game.Game;
 
+import java.sql.Time;
+import java.time.Instant;
+import java.util.Date;
+import java.util.Timer;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class GameSession implements TimedSession<Long, Game>, Pauseable {
@@ -11,6 +15,18 @@ public class GameSession implements TimedSession<Long, Game>, Pauseable {
     private final Game game;
 
     private final long id;
+
+    private long startTime;
+
+    private long endTime;
+
+    private long sessionLength;
+
+    private long pauseStart;
+
+    private long pauseStop;
+
+    private long pauseTime;
 
     protected GameSession(Game game) {
         this.game = game;
@@ -29,22 +45,24 @@ public class GameSession implements TimedSession<Long, Game>, Pauseable {
 
     @Override
     public void pause() {
-
+        pauseStart = Instant.now().getEpochSecond();
     }
 
     @Override
     public void unpause() {
-
+        pauseStop = Instant.now().getEpochSecond();
+        pauseTime = pauseStop - pauseStart;
     }
 
     @Override
     public void startTimer() {
-
+        startTime = Instant.now().getEpochSecond();
     }
 
     @Override
     public void stopTimer() {
-
+        endTime = Instant.now().getEpochSecond();
+        sessionLength = (endTime - startTime) - pauseTime;
     }
 
 }
