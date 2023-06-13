@@ -2,16 +2,13 @@ package me.ledovec.game;
 
 import me.ledovec.listener.GameListener;
 import me.ledovec.session.GameSession;
+import me.ledovec.session.Pauseable;
 
-public interface Game {
+public interface Game extends Pauseable {
 
     void start();
 
     void stop();
-
-    void pause();
-
-    void unpause();
 
     void setGameListener(GameListener gameListener);
 
