@@ -1,8 +1,5 @@
-package me.ledovec.builder;
+package me.ledovec.game;
 
-import me.ledovec.game.GameFactory;
-import me.ledovec.game.Game;
-import me.ledovec.game.GameType;
 import me.ledovec.listener.GameListener;
 
 public class GameBuilder {
