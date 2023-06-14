@@ -38,7 +38,7 @@ public class GameSessionProvider implements Provider<GameSession>, Pauseable {
 
     @Override
     public void stopCurrent() {
-        gameSession.stopTimer();
+        gameSession.getSessionSubject().stop();
     }
 
     @Override

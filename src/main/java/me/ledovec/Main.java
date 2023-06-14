@@ -1,12 +1,11 @@
 package me.ledovec;
 
-import me.ledovec.game.GameBuilder;
 import me.ledovec.game.Game;
+import me.ledovec.game.GameBuilder;
 import me.ledovec.game.GameType;
 import me.ledovec.listener.GlobalListener;
 import me.ledovec.listener.ParkourListener;
 import me.ledovec.session.GameSession;
-import me.ledovec.session.GameSessionFactory;
 import me.ledovec.session.provider.GameSessionProvider;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -37,6 +36,7 @@ public class Main extends JavaPlugin {
 
         GameSession gameSession = game.getGameSession();
         GAME_SESSION_PROVIDER.prepare(gameSession);
+        GAME_SESSION_PROVIDER.beginPrepared();
 
     }
 
