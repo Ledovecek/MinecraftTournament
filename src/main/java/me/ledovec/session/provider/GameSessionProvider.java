@@ -27,6 +27,7 @@ public class GameSessionProvider implements Provider<GameSession>, Pauseable {
     @Override
     public void prepare(GameSession gameSession) {
         Objects.requireNonNull(gameSession, "Game session can not be null!");
+        gameSession.getSessionSubject().stop();
         this.gameSession = gameSession;
     }
 
