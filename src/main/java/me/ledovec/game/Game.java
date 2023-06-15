@@ -18,4 +18,9 @@ public sealed interface Game extends Pauseable permits GameProvider {
 
     GameSession getGameSession();
 
+    /*
+        Invoked when game is added to GameSessionProvider
+     */
+    void onInit();
+
 }

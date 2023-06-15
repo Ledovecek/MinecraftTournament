@@ -58,9 +58,16 @@ public abstract non-sealed class GameProvider implements Game {
         this.gameSession = gameSession;
     }
 
+    @Override
+    public void onInit() {
+        this.onPrepare();
+    }
+
     /*
-        Methods body is empty to be optional
-     */
+                Methods body is empty to be optional
+             */
+    public void onPrepare() {}
+
     public void onStart() {}
 
     public void onFinish() {}
