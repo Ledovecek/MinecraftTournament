@@ -1,7 +1,7 @@
 package me.ledovec.session;
 
 import lombok.NonNull;
-import me.ledovec.game.Game;
+import me.ledovec.Game;
 
 import java.util.HashSet;
 import java.util.Optional;

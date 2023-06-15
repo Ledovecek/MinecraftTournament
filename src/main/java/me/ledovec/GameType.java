@@ -1,4 +1,4 @@
-package me.ledovec.game;
+package me.ledovec;
 
 import me.ledovec.game.types.ParkourGame;
 

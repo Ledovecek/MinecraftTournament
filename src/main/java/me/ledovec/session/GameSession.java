@@ -1,6 +1,6 @@
 package me.ledovec.session;
 
-import me.ledovec.game.Game;
+import me.ledovec.Game;
 
 import java.time.Instant;
 import java.util.concurrent.atomic.AtomicLong;

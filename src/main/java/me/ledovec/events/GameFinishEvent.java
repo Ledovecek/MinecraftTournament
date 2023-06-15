@@ -1,6 +1,6 @@
 package me.ledovec.events;
 
-import me.ledovec.game.Game;
+import me.ledovec.Game;
 import org.bukkit.event.HandlerList;
 
 public class GameFinishEvent extends GameEvent {

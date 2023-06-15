@@ -1,6 +1,6 @@
 package me.ledovec.game.types;
 
-import me.ledovec.game.GameProvider;
+import me.ledovec.GameProvider;
 
 public class ParkourGame extends GameProvider {
 
