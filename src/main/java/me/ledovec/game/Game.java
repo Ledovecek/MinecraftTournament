@@ -4,7 +4,7 @@ import me.ledovec.listener.GameListener;
 import me.ledovec.session.GameSession;
 import me.ledovec.session.Pauseable;
 
-public interface Game extends Pauseable {
+public sealed interface Game extends Pauseable permits GameProvider {
 
     void start();
 
