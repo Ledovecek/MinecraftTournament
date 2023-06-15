@@ -1,7 +1,9 @@
 package me.ledovec.session.provider;
 
+import me.ledovec.events.GamePrepareEvent;
 import me.ledovec.session.GameSession;
 import me.ledovec.session.Pauseable;
+import org.bukkit.Bukkit;
 
 import java.util.Objects;
 
@@ -27,8 +29,10 @@ public class GameSessionProvider implements Provider<GameSession>, Pauseable {
     @Override
     public void prepare(GameSession gameSession) {
         Objects.requireNonNull(gameSession, "Game session can not be null!");
-        gameSession.getSessionSubject().stop();
+        this.gameSession.getSessionSubject().stop();
         this.gameSession = gameSession;
+
+        Bukkit.getPluginManager().callEvent(new GamePrepareEvent(gameSession.getSessionSubject()));
     }
 
     @Override
