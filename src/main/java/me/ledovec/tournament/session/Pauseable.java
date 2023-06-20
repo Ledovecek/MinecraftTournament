@@ -4,6 +4,6 @@ public interface Pauseable {
 
     void pause();
 
-    void unpause();
+    void resume();
 
 }

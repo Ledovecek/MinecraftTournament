@@ -17,8 +17,8 @@ public class GameSessionProvider implements Provider<GameSession>, Pauseable {
     }
 
     @Override
-    public void unpause() {
-        gameSession.unpause();
+    public void resume() {
+        gameSession.resume();
     }
 
     @Override

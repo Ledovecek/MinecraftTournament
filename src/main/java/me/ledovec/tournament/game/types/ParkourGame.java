@@ -25,8 +25,8 @@ public class ParkourGame extends GameProvider {
     }
 
     @Override
-    public void onUnpause() {
-        super.onUnpause();
+    public void onResume() {
+        super.onResume();
     }
 
 }
