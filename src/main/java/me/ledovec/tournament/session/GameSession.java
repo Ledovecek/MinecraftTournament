@@ -54,7 +54,7 @@ public class GameSession implements TimedSession<Long, Game>, Pauseable {
     }
 
     @Override
-    public void unpause() {
+    public void resume() {
         this.paused = false;
         pauseStop = Instant.now().getEpochSecond();
         pauseTime = pauseStop - pauseStart;

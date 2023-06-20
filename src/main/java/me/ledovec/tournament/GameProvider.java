@@ -3,7 +3,7 @@ package me.ledovec.tournament;
 import me.ledovec.tournament.events.GameFinishEvent;
 import me.ledovec.tournament.events.GamePauseEvent;
 import me.ledovec.tournament.events.GameStartEvent;
-import me.ledovec.tournament.events.GameUnpauseEvent;
+import me.ledovec.tournament.events.GameResumeEvent;
 import me.ledovec.tournament.listener.GameListener;
 import me.ledovec.tournament.session.GameSession;
 import org.bukkit.Bukkit;
@@ -33,9 +33,9 @@ public abstract non-sealed class GameProvider implements Game {
     }
 
     @Override
-    public void unpause() {
-        Bukkit.getPluginManager().callEvent(new GameUnpauseEvent(this));
-        this.onUnpause();
+    public void resume() {
+        Bukkit.getPluginManager().callEvent(new GameResumeEvent(this));
+        this.onResume();
     }
 
     @Override
@@ -66,6 +66,6 @@ public abstract non-sealed class GameProvider implements Game {
 
     public void onPause() { /* Method body is empty to be optional */ }
 
-    public void onUnpause() { /* Method body is empty to be optional */ }
+    public void onResume() { /* Method body is empty to be optional */ }
 
 }
